@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Soal 3</title>
+</head>
+<body>
+    <script>
+        // deklarasi kelas
+        function Buah(nama, warna, adaBijinya, harga) {
+            this.nama = nama;
+            this.warna = warna;
+            this.adaBijinya = adaBijinya;
+            this.harga = harga;
+
+            this.show = function() {
+                return 'Nama : '+this.nama+'<br>Warna : '+this.warna+ '<br>Ada Bijinya : '+this.adaBijinya+ '<br>Harga : '+this.harga+'<br>';
+            }
+        }
+
+        // masukin data
+        var strawberry = new Buah("strawberry", "merah", "tidak", 9000);
+        var jeruk = new Buah("jeruk", "oranye", "ada", 8000);
+        var semangka = new Buah("Semangka","hijau dan merah","ada",10000);
+        var pisang = new Buah("Pisang", "Kuning", "tidak", 5000);
+
+        // print objek pertama
+        document.write(strawberry.show());
+    </script>
+</body>
+</html>
