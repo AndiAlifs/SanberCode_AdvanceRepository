@@ -11,10 +11,10 @@
             <input type="text" v-model='content'>
             <button @click="addName">Add</button>
             <ul>
-                <li v-for="nama in name">
+                <li v-for="(nama,index) in name">
                     {{ nama }}
-                    <button>Edit</button>
-                    <button>Hapus</button>
+                    <button @click=editName(index)>Edit</button>
+                    <button @click="removeName(index)">Hapus</button>
                 </li>
             </ul>
         </div>
