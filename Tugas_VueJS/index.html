@@ -6,8 +6,17 @@
         <title>Vue Js For Beginners</title>
     </head>
     <body>
-        <div id="app" v-html='message'>
-            <p v-if="show">{{ message }}</p>
+        <div id="app">
+            <div id="AllComment">
+                <div v-for="(komen,index) in comments">
+                    <button>+</button><br>
+                    <p>{{ komen }} || Score : {{ score[index] }}</p>
+                    <button>-</button><br>
+                </div>
+            </div>
+            <br>
+            <textarea v-model="newComment" cols="30" rows="10"></textarea><br>
+            <button @click="addComment">Tambah Komentar</button>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
